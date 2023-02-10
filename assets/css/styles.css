@@ -27,19 +27,26 @@ html{
 
 /* header/ nav/ subnav */
 #nav{
-    display: flex;
-    flex-direction: row;
-    align-items: top;
+    display: inline-block;
 }
 
 #nav .subnav{
     display: none;
     position: absolute;
     top: var(--header-height);
+    left: 0;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#header .search-btn{
+    float: right;
+    display: block;
 }
 
 /* header/ list-items */
 #nav li{
+    display: inline-block;
     position: relative;
 
     height: var(--header-height);
@@ -48,7 +55,7 @@ html{
 }
 
 #nav .subnav > li{
-    width: 160px;
+    min-width: 160px;
     height: 38.5px;
 
     background-color: #fff;
@@ -63,16 +70,26 @@ html{
 
     line-height: var(--header-height);
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 #nav .subnav >li > a{
     display: block;
-    padding: 0px 16px;
+    padding: 0px 12px;
 
     color: #000;
 
     line-height: 38.5px;
     text-decoration: none;
+}
+
+#header .ti-search{
+    display: block;
+    padding: 0 23px;
+
+    color: #fff;
+
+    line-height: var(--header-height);
 }
 
 /* header/ hover */
@@ -83,6 +100,11 @@ html{
 
 #nav li:hover .subnav{
     display: block;
+}
+
+#header .search-btn:hover .ti-search{
+    background-color: #F44335;
+    cursor: pointer;
 }
 
 /* SECTION slider */
