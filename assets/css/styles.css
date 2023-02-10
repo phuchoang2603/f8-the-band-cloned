@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    /* font-size: 62.5%; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SECTION main */
+#main{
+
+}
+
+/* SECTION header */
+#header{
+    display: fixed;
+    top: 0;
+
+    --header-height: 46.5px;
+    height: var(--header-height);
+
+    background-color: #000;
+}
+
+/* header/ nav/ subnav */
+#nav{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+}
+
+#nav .subnav{
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+}
+
+/* header/ list-items */
+#nav li{
+    position: relative;
+
+    height: var(--header-height);
+
+    list-style-type: none;
+}
+
+#nav .subnav > li{
+    width: 160px;
+    height: 38.5px;
+
+    background-color: #fff;
+}
+
+/* header/ anchor */
+#nav > li > a{
+    display: inline-block;
+    padding: 0px 24px;
+
+    color: #fff;
+
+    line-height: var(--header-height);
+    text-decoration: none;
+}
+
+#nav .subnav >li > a{
+    display: block;
+    padding: 0px 16px;
+
+    color: #000;
+
+    line-height: 38.5px;
+    text-decoration: none;
+}
+
+/* header/ hover */
+#nav li:hover > a{
+    background-color: #ccc;
+    color: #000;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+/* SECTION slider */
+#slider{
+    height: 952.5px;
+    background-color: #ccc;
+}
+
+
+
+/* SECTION container */
+#container{
+
+}
+
+
+
+/* SECTION footer */
+#footer{
+
+}
+
