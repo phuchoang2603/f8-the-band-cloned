@@ -45,8 +45,7 @@ html{
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-#header .search-btn{
-    float: right;
+#nav li:hover .subnav{
     display: block;
 }
 
@@ -89,6 +88,17 @@ html{
     text-decoration: none;
 }
 
+#nav li:hover > a{
+    background-color: #ccc;
+    color: #000;
+}
+
+/* header/ search-btn */
+#header .search-btn{
+    float: right;
+    display: block;
+}
+
 #header .ti-search{
     display: block;
     padding: 0 23px;
@@ -96,16 +106,6 @@ html{
     color: #fff;
 
     line-height: var(--header-height);
-}
-
-/* header/ hover */
-#nav li:hover > a{
-    background-color: #ccc;
-    color: #000;
-}
-
-#nav li:hover .subnav{
-    display: block;
 }
 
 #header .search-btn:hover .ti-search{
@@ -205,9 +205,11 @@ html{
     background-color: #000;
 }
 
+/* content/ tour/ dates */
 #content .ticket-dates{
     background-color: #fff;
     list-style-type: none;
+    margin: 48px 0;
 }
 
 .ticket-dates .dates-items {
@@ -240,6 +242,63 @@ html{
     line-height: 24px;
     border-radius: 50%;
 }
+/* content/ tour/ places */
+#content .ticket-places{
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 0;
+}
+
+.ticket-places .place-item{
+    width: 245px;
+}
+
+.ticket-places .place-img{
+    width: 100%;
+    display: block;
+}
+
+.ticket-places .place-img:hover{
+    opacity: 0.6;
+}
+
+.ticket-places .place-content{
+    background-color: #fff;
+    padding: 0px 16px;
+    font-size: 15px;
+}
+
+.ticket-places .place-heading{
+    margin-top: 15px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.ticket-places .place-dates{
+    margin: 15px 0;
+    color: #757575;
+}
+
+.ticket-places .place-text{
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+.ticket-places .place-buy-btn{
+    margin-bottom: 15px;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.ticket-places .place-buy-btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
 /* SECTION footer */
 #footer{
 
