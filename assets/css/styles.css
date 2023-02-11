@@ -10,6 +10,9 @@ html{
     --header-height: 46.5px;
 }
 
+.text-white{
+    color: #fff !important;
+}
 /* SECTION main */
 #main{
     height: 1000px;
@@ -151,9 +154,8 @@ html{
 }
 
 #content .content-section{
-    width: 800px;
     margin: 0 auto;
-    padding: 64px 0;
+    padding: 64px 25%;
 }
 
 #content .section-heading{
@@ -171,6 +173,7 @@ html{
     opacity: 0.6;
 }
 
+/* content/ about */
 #content .about-text{
     margin: 25px 0px;
     text-align: justify;
@@ -197,6 +200,46 @@ html{
     text-align: center;
 }
 
+/* content/ tour */
+#content .content-section:nth-of-type(2){
+    background-color: #000;
+}
+
+#content .ticket-dates{
+    background-color: #fff;
+    list-style-type: none;
+}
+
+.ticket-dates .dates-items {
+    
+    padding: 12px 16px;
+
+    font-size: 15px;
+    color: #757575;
+    
+    border-bottom: 1px solid #ddd;
+}
+
+.ticket-dates .sold-out {
+    background-color: #f44336;
+    padding: 4px;
+    color: #fff;
+    margin-left: 16px;
+}
+
+.ticket-dates .quantity {
+    float: right;
+    width: 24px;
+    height: 24px;
+    margin-top: -3px;
+
+    background-color: #000;
+    color: #fff;
+
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+}
 /* SECTION footer */
 #footer{
 
