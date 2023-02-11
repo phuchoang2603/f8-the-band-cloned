@@ -7,19 +7,22 @@
 html{
     /* font-size: 62.5%; */
     font-family: Arial, Helvetica, sans-serif;
+    --header-height: 46.5px;
 }
 
 /* SECTION main */
 #main{
-
+    height: 1000px;
 }
 
 /* SECTION header */
 #header{
-    display: fixed;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 
-    --header-height: 46.5px;
     height: var(--header-height);
 
     background-color: #000;
@@ -56,8 +59,8 @@ html{
 
 #nav .subnav > li{
     min-width: 160px;
-    height: 38.5px;
-
+    --subnav-height: calc(var(--header-height) - 8px);
+    height: var(--subnav-height);
     background-color: #fff;
 }
 
@@ -79,7 +82,7 @@ html{
 
     color: #000;
 
-    line-height: 38.5px;
+    line-height: var(--subnav-height);
     text-decoration: none;
 }
 
@@ -109,18 +112,70 @@ html{
 
 /* SECTION slider */
 #slider{
-    height: 952.5px;
-    background-color: #ccc;
+    margin-top: var(--header-height);
+    position: relative;
+
+    width: 100%;
+    padding-top: 50%;
+
+    background: url("/assets/img/slider1.jpg") top center/cover no-repeat;
 }
 
+#slider .text-content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);    
+
+    color: #fff;
+    padding: 32px 16px;
+    text-align: center;
+}
+
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 0;
+} 
+
+#slider .text-description{
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 0;
+}
 
 
 /* SECTION container */
-#container{
-
+#content{
+    
 }
 
+#content .content-section{
+    width: 800px;
+    margin: 0 auto;
+    padding: 64px 0;
+}
 
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text{
+    margin-top: 25px;
+    text-align: justify;
+    line-height: 1,4;
+}
 
 /* SECTION footer */
 #footer{
