@@ -15,6 +15,7 @@
     </head>
     <body>        
         <div id="main">
+            <!-- SECTION HEADER -->
             <div id="header">
                 <!-- BEGIN NAV -->
                 <ul id="nav">
@@ -34,21 +35,21 @@
                         </ul>
                     </li>
                 </ul>
-                <!-- END NAV -->
+                
                 <!-- BEGIN SEARCH-BUTTON -->
                 <div class="search-btn">
                     <i class="ti-search"></i>
                 </div>
-                <!-- END SEARCH-BUTTON -->
+                
             </div>
-    
+            <!-- SECTION SLIDER -->
             <div id="slider">
                 <div class="text-content">
                     <h2 class="text-heading">Chicago</h2>
                     <div class="text-description">Thank you, Chicago - A night we won't forget.</div>
                 </div>
             </div>
-    
+            <!-- SECTION CONTENT -->
             <div id="content">
                 <!-- BEGIN BAND -->
                 <div class="content-section">
@@ -72,7 +73,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- END BAND -->
 
                 <!-- BEGIN TOUR -->
                 <div class="content-section">
@@ -94,7 +94,7 @@
                     <!-- places -->
                     <div class="ticket-places">
                         <div class="place-item">
-                            <img src="./assets/img/place1.jpg" alt="New York" class="place-img">
+                            <img src="./assets/img/place1.jpg" alt="New York" class="place-img hover-effect">
                             <div class="place-content">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-dates">Fri 27 Nov 2016</p>
@@ -109,7 +109,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-dates">Fri 27 Nov 2016</p>
                                 <p class="place-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <a href="#" class="place-buy-btn hover-effect">Buy Tickets</a>
                             </div>
                         </div>
 
@@ -125,18 +125,57 @@
                     </div>
 
                 </div>
-                <!-- END TOUR -->
 
                 <!-- BEGIN CONTACT -->
                 <div class="content-section">
                     <h2 class="section-heading">CONTACT</h2>
                     <div class="section-sub-heading">Fan? Drop a note!</div>    
                 </div>
-                <!-- END CONTACT -->
+                
             </div>
     
             <div id="footer">
     
+            </div>
+        </div>
+
+        <!-- BUY MODAL TICKETS -->
+        <div class="modal-overlay">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <div class="modal-close hover-effect">
+                        <i class="ti-close"></i>
+                    </div>
+                    <div class="modal-heading">
+                        <i class="ti-bag"></i>
+                        <div>Tickets</div>
+                    </div>
+                </div>
+    
+                <div class="modal-content">
+                    <div class="modal-field">
+                        <label for="modal-quantity" class="modal-label">
+                            <i class="ti-shopping-cart"></i>
+                            Tickets, $15 per person
+                        </label>
+                        <input id="modal-quantity" type="text" class="modal-input" placeholder="How many?">
+                    </div>
+                    <div class="modal-field">
+                        <label for="modal-email" class="modal-label">
+                            <i class="ti-user"></i>
+                            Send to
+                        </label>
+                        <input id="modal-email" type="email" class="modal-input" placeholder="Enter email">
+                    </div>
+                    <button class="modal-button hover-effect">
+                        Pay
+                        <i class="ti-check"></i>
+                    </button>
+                </div>
+                
+                <div class="modal-footer">
+                    Need <a href="#">help?</a>                    
+                </div>
             </div>
         </div>
     </body>

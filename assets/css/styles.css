@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* border: 1px solid #000 !important; */
 }
 
 html{
@@ -12,6 +13,11 @@ html{
 
 .text-white{
     color: #fff !important;
+}
+
+.hover-effect:hover{
+    opacity: 0.6 !important;
+    cursor: pointer !important;
 }
 /* SECTION main */
 #main{
@@ -258,10 +264,6 @@ html{
     display: block;
 }
 
-.ticket-places .place-img:hover{
-    opacity: 0.6;
-}
-
 .ticket-places .place-content{
     background-color: #fff;
     padding: 0px 16px;
@@ -294,9 +296,122 @@ html{
     text-decoration: none;
 }
 
-.ticket-places .place-buy-btn:hover{
-    background-color: #ccc;
-    color: #000;
+/* content/ tour/ buy modal */
+.modal-overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: var(--header-height);
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0,0.3);
+}
+
+.modal-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 900px;
+    max-width: calc(100%-32px);
+    min-height: 450px;
+    
+    background-color: #fff;
+}
+
+.modal-header {
+    background-color: #009688;
+
+    position: relative;
+    padding: 32px 16px;
+    
+    width: 100%;
+    min-height: 128px;
+
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    padding: 16px;
+    font-size: 16px;
+}
+
+.modal-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+
+    padding: 10px;
+    font-weight: 500;
+}
+
+.modal-content {
+    padding: 32px 16px;
+
+    width: 100%;
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 15px;
+    
+}
+
+.modal-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 5px;
+    
+    font-size: 15px;
+}
+
+.modal-label {
+    display: block;
+
+    font-weight: 600;
+}
+
+.modal-input {
+    width: 100%;
+    display: block;
+    padding: 10px;
+
+    border: 1px solid #ccc;
+}
+
+.modal-button {
+    background-color: #009688;
+    border: none;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 18px;    
+}
+
+.modal-footer {
+    padding: 15px 16px;
+    width: 100%;
+    text-align: right;
+}
+
+.modal-footer > a{
+    color: #009688;
+    text-decoration: none;
 }
 
 /* SECTION footer */
