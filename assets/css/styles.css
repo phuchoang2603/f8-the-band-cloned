@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 1px solid #000 !important;
+    /* border: 1px solid #000 !important; */
 }
 
 html{
@@ -20,6 +20,14 @@ html{
     background-color: #000;
     color: #fff;
     border: none;
+}
+
+.input-style {
+    width: 100%;
+    display: block;
+    padding: 10px;
+
+    border: 1px solid #ccc;
 }
 
 .hover-button:hover{
@@ -379,14 +387,6 @@ html{
     font-weight: 600;
 }
 
-.modal-input {
-    width: 100%;
-    display: block;
-    padding: 10px;
-
-    border: 1px solid #ccc;
-}
-
 .modal-button {
     background-color: #009688;
     border: none;
@@ -407,6 +407,28 @@ html{
     text-decoration: none;
 }
 
+/* content/ contact */
+.contact-content {
+    margin: 32px 0;
+    align-items: flex-start;
+}
+
+.contact-band {
+    row-gap: 5px;
+    font-size: 18px;
+    width: 50%;
+}
+
+.contact-fan {
+    row-gap: 10px;
+    font-size: 15px;
+    align-items: flex-end;
+    width: 50%;
+}
+
+.contact-fan .fan-name-email {
+    column-gap: 16px;
+}
 /* SECTION footer */
 #footer{
 

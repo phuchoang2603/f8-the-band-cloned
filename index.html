@@ -131,7 +131,30 @@
                 <!-- BEGIN CONTACT -->
                 <div class="content-section">
                     <h2 class="section-heading">CONTACT</h2>
-                    <div class="section-sub-heading">Fan? Drop a note!</div>    
+                    <div class="section-sub-heading">Fan? Drop a note!</div>
+
+                    <div class="contact-content row-flex-between">
+                        <div class="contact-band column-flex-between">
+                            <div>
+                                <i class="ti-location-pin"></i> Chicago, US
+                            </div>
+                            <div>
+                                <i class="ti-mobile "></i> Phone: +00 151515
+                            </div>
+                            <div>
+                                <i class="ti-email"></i> Email: mail@mail.com
+                            </div>
+                        </div>
+
+                        <div class="contact-fan column-flex-between">
+                            <div class="fan-name-email row-flex-between">
+                                <input type="text" name="fan-name" id="fan-name" class="input-style" placeholder="Name">
+                                <input type="email" name="fan-email" id="fan-email" class="input-style" placeholder="Email">
+                            </div>
+                            <input type="text" name="fan-message" id="fan-message" class="input-style" placeholder="Message">
+                            <input type="submit" value="Send" class="button-style">
+                        </div>
+                    </div>
                 </div>
                 
             </div>
@@ -141,10 +164,10 @@
             </div>
         </div>
 
-        <!-- BUY MODAL TICKETS -->
+        <!-- BUY MODAL -->
         <div class="modal-overlay js-modal-overlay">
             <div class="modal-container column-flex-between js-modal-container">
-                <div class="modal-header">
+                <div class="modal-header">`
                     <div class="modal-close hover-button js-modal-close">
                         <i class="ti-close"></i>
                     </div>
@@ -160,14 +183,14 @@
                             <i class="ti-shopping-cart"></i>
                             Tickets, $15 per person
                         </label>
-                        <input id="modal-quantity" type="text" class="modal-input" placeholder="How many?">
+                        <input id="modal-quantity" type="text" class="input-style" placeholder="How many?">
                     </div>
                     <div class="modal-field column-flex-between">
                         <label for="modal-email" class="modal-label">
                             <i class="ti-user"></i>
                             Send to
                         </label>
-                        <input id="modal-email" type="email" class="modal-input" placeholder="Enter email">
+                        <input id="modal-email" type="email" class="input-style" placeholder="Enter email">
                     </div>
                     <button class="modal-button hover-button">
                         Pay
