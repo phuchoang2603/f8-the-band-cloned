@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* border: 1px solid #000 !important; */
+    border: 1px solid #000 !important;
 }
 
 html{
@@ -10,15 +10,42 @@ html{
     font-family: Arial, Helvetica, sans-serif;
     --header-height: 46.5px;
 }
-
+/* GLOBAL CSS */
 .text-white{
     color: #fff !important;
+}
+
+.button-style {
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.hover-button:hover{
+    background-color: #ccc !important;
+    color: #000 !important;
+    cursor: pointer !important;
 }
 
 .hover-effect:hover{
     opacity: 0.6 !important;
     cursor: pointer !important;
 }
+
+.row-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column-flex-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 /* SECTION main */
 #main{
     height: 1000px;
@@ -46,45 +73,45 @@ html{
     display: none;
     position: absolute;
     top: var(--header-height);
-    left: 0;
 
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-#nav li:hover .subnav{
+#nav .nav-item:hover .subnav{
     display: block;
 }
 
 /* header/ list-items */
-#nav li{
+#nav .nav-item{
     display: inline-block;
     position: relative;
 
     height: var(--header-height);
 
     list-style-type: none;
+    color: #fff;
 }
 
-#nav .subnav > li{
+#nav .subnav > .nav-item{
     min-width: 160px;
     --subnav-height: calc(var(--header-height) - 8px);
     height: var(--subnav-height);
+
     background-color: #fff;
 }
 
 /* header/ anchor */
-#nav > li > a{
+#nav > .nav-item > a{
     display: inline-block;
     padding: 0px 24px;
 
-    color: #fff;
-
+    color: inherit;
     line-height: var(--header-height);
     text-decoration: none;
     text-transform: uppercase;
 }
 
-#nav .subnav >li > a{
+#nav .subnav > .nav-item > a{
     display: block;
     padding: 0px 12px;
 
@@ -92,11 +119,6 @@ html{
 
     line-height: var(--subnav-height);
     text-decoration: none;
-}
-
-#nav li:hover > a{
-    background-color: #ccc;
-    color: #000;
 }
 
 /* header/ search-btn */
@@ -155,13 +177,10 @@ html{
 
 
 /* SECTION container */
-#content{
-    
-}
-
 #content .content-section{
     margin: 0 auto;
-    padding: 64px 25%;
+    padding: 64px 0;
+    max-width: 800px;
 }
 
 #content .section-heading{
@@ -187,11 +206,7 @@ html{
 }
 
 #content .about-member{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    padding: 32px 0;
+    margin: 32px 0;
 }
 
 #content .member-img{
@@ -201,21 +216,20 @@ html{
 }
 
 #content .member-name{
-    margin: 15px 0;
-
+    margin: 10px 0;
     text-align: center;
 }
 
 /* content/ tour */
-#content .content-section:nth-of-type(2){
-    background-color: #000;
+#content .black-background{
+    background-color: #000 ;
 }
 
 /* content/ tour/ dates */
 #content .ticket-dates{
     background-color: #fff;
     list-style-type: none;
-    margin: 48px 0;
+    margin: 32px 0;
 }
 
 .ticket-dates .dates-items {
@@ -250,13 +264,11 @@ html{
 }
 /* content/ tour/ places */
 #content .ticket-places{
-    display: flex;
-    justify-content: space-between;
     margin: 32px 0;
 }
 
 .ticket-places .place-item{
-    width: 245px;
+    max-width: 240px;
 }
 
 .ticket-places .place-img{
@@ -266,34 +278,22 @@ html{
 
 .ticket-places .place-content{
     background-color: #fff;
-    padding: 0px 16px;
+    padding: 15px 16px;
+    row-gap: 15px;
     font-size: 15px;
 }
 
 .ticket-places .place-heading{
-    margin-top: 15px;
-    display: inline-block;
     font-size: 15px;
     font-weight: 550;
 }
 
 .ticket-places .place-dates{
-    margin: 15px 0;
     color: #757575;
 }
 
 .ticket-places .place-text{
-    margin: 15px 0;
     line-height: 1.4;
-}
-
-.ticket-places .place-buy-btn{
-    margin-bottom: 15px;
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
 }
 
 /* content/ tour/ buy modal */
@@ -316,11 +316,6 @@ html{
 }
 
 .modal-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
     width: 900px;
     max-width: calc(100%-32px);
     min-height: 450px;
@@ -368,20 +363,13 @@ html{
     width: 100%;
     min-height: 200px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     row-gap: 15px;
     
 }
 
 .modal-field {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    row-gap: 5px;
-    
+    row-gap: 5px;  
+    width: 100%;
     font-size: 15px;
 }
 
@@ -424,6 +412,7 @@ html{
 
 }
 
+/* SECTION animation */
 @keyframes modal-fade-in {
     from {
         transform: translateY(-100%);

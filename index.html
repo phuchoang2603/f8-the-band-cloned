@@ -19,19 +19,19 @@
             <div id="header">
                 <!-- BEGIN NAV -->
                 <ul id="nav">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Band</a></li>
-                    <li><a href="">Tour</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li>
+                    <li class="nav-item hover-button"><a href="">Home</a></li>
+                    <li class="nav-item hover-button"><a href="">Band</a></li>
+                    <li class="nav-item hover-button"><a href="">Tour</a></li>
+                    <li class="nav-item hover-button"><a href="">Contact</a></li>
+                    <li class="nav-item hover-button">
                         <a href="">
                             More
                             <i class="ti-angle-down"></i>
                         </a>
                         <ul class="subnav">
-                            <li><a href="">Merchandise</a></li>
-                            <li><a href="">Extras</a></li>
-                            <li><a href="">Media</a></li>
+                            <li class="nav-item hover-button"><a href="">Merchandise</a></li>
+                            <li class="nav-item hover-button"><a href="">Extras</a></li>
+                            <li class="nav-item hover-button"><a href="">Media</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -58,7 +58,7 @@
                     <p class="about-text">
                         We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
-                    <div class="about-member">
+                    <div class="about-member row-flex-between">
                         <div class="member-item">
                             <div class="member-name">Name</div>
                             <img src="./assets/img/member.jpg" alt="member images" class="member-img">
@@ -75,55 +75,57 @@
                 </div>
 
                 <!-- BEGIN TOUR -->
-                <div class="content-section">
-                    <h2 class="section-heading text-white">TOUR DATES</h2>
-                    <div class="section-sub-heading text-white">Remember to book your tickets!</div>
-                    <!-- dates -->
-                    <ul class="ticket-dates">
-                        <li class="dates-items">
-                            September <span class="sold-out">Sold out</span>
-                        </li>
-                        <li class="dates-items">
-                            October <span class="sold-out">Sold out</span>
-                        </li>
-                        <li class="dates-items">
-                            November <span class="quantity">3</span>
-                        </li>
-                    </ul>
-
-                    <!-- places -->
-                    <div class="ticket-places">
-                        <div class="place-item">
-                            <img src="./assets/img/place1.jpg" alt="New York" class="place-img hover-effect">
-                            <div class="place-content">
-                                <h3 class="place-heading">New York</h3>
-                                <p class="place-dates">Fri 27 Nov 2016</p>
-                                <p class="place-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="place-buy-btn hover-effect js-place-buy-btn">Buy Tickets</button>
+                <div class="black-background">
+                    <div class="content-section">
+                        <h2 class="section-heading text-white">TOUR DATES</h2>
+                        <div class="section-sub-heading text-white">Remember to book your tickets!</div>
+                        <!-- dates -->
+                        <ul class="ticket-dates">
+                            <li class="dates-items">
+                                September <span class="sold-out">Sold out</span>
+                            </li>
+                            <li class="dates-items">
+                                October <span class="sold-out">Sold out</span>
+                            </li>
+                            <li class="dates-items">
+                                November <span class="quantity">3</span>
+                            </li>
+                        </ul>
+    
+                        <!-- places -->
+                        <div class="ticket-places row-flex-between">
+                            <div class="place-item">
+                                <img src="./assets/img/place1.jpg" alt="New York" class="place-img hover-effect">
+                                <div class="place-content column-flex-between">
+                                    <h3 class="place-heading">New York</h3>
+                                    <p class="place-dates">Fri 27 Nov 2016</p>
+                                    <p class="place-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <button class="place-buy-btn button-style hover-button js-place-buy-btn">Buy Tickets</button>
+                                </div>
+                            </div>
+    
+                            <div class="place-item">
+                                <img src="./assets/img/place2.jpg" alt="Paris" class="place-img hover-effect">
+                                <div class="place-content column-flex-between">
+                                    <h3 class="place-heading">Paris</h3>
+                                    <p class="place-dates">Fri 27 Nov 2016</p>
+                                    <p class="place-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <button class="place-buy-btn button-style hover-button js-place-buy-btn">Buy Tickets</button>
+                                </div>
+                            </div>
+    
+                            <div class="place-item">
+                                <img src="./assets/img/place3.jpg" alt="San Francisco" class="place-img hover-effect">
+                                <div class="place-content column-flex-between">
+                                    <h3 class="place-heading">San Francisco</h3>
+                                    <p class="place-dates">Fri 27 Nov 2016</p>
+                                    <p class="place-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <button class="place-buy-btn button-style hover-button js-place-buy-btn">Buy Tickets</button>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="place-item">
-                            <img src="./assets/img/place2.jpg" alt="Paris" class="place-img hover-effect">
-                            <div class="place-content">
-                                <h3 class="place-heading">Paris</h3>
-                                <p class="place-dates">Fri 27 Nov 2016</p>
-                                <p class="place-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="place-buy-btn hover-effect js-place-buy-btn">Buy Tickets</button>
-                            </div>
-                        </div>
-
-                        <div class="place-item">
-                            <img src="./assets/img/place3.jpg" alt="San Francisco" class="place-img hover-effect">
-                            <div class="place-content">
-                                <h3 class="place-heading">San Francisco</h3>
-                                <p class="place-dates">Fri 27 Nov 2016</p>
-                                <p class="place-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="place-buy-btn hover-effect js-place-buy-btn">Buy Tickets</button>
-                            </div>
-                        </div>
+    
                     </div>
-
                 </div>
 
                 <!-- BEGIN CONTACT -->
@@ -141,9 +143,9 @@
 
         <!-- BUY MODAL TICKETS -->
         <div class="modal-overlay js-modal-overlay">
-            <div class="modal-container js-modal-container">
+            <div class="modal-container column-flex-between js-modal-container">
                 <div class="modal-header">
-                    <div class="modal-close hover-effect js-modal-close">
+                    <div class="modal-close hover-button js-modal-close">
                         <i class="ti-close"></i>
                     </div>
                     <div class="modal-heading">
@@ -152,29 +154,29 @@
                     </div>
                 </div>
     
-                <div class="modal-content">
-                    <div class="modal-field">
+                <div class="modal-content column-flex-between">
+                    <div class="modal-field column-flex-between">
                         <label for="modal-quantity" class="modal-label">
                             <i class="ti-shopping-cart"></i>
                             Tickets, $15 per person
                         </label>
                         <input id="modal-quantity" type="text" class="modal-input" placeholder="How many?">
                     </div>
-                    <div class="modal-field">
+                    <div class="modal-field column-flex-between">
                         <label for="modal-email" class="modal-label">
                             <i class="ti-user"></i>
                             Send to
                         </label>
                         <input id="modal-email" type="email" class="modal-input" placeholder="Enter email">
                     </div>
-                    <button class="modal-button hover-effect">
+                    <button class="modal-button hover-button">
                         Pay
                         <i class="ti-check"></i>
                     </button>
                 </div>
                 
                 <div class="modal-footer">
-                    Need <a href="#">help?</a>                    
+                    Need <a href="#" class="hover-effect">help?</a>                    
                 </div>
             </div>
         </div>
