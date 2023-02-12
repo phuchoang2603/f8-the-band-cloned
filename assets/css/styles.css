@@ -337,11 +337,12 @@ html{
 
     position: relative;
     padding: 32px 16px;
+    display: flex;
+    justify-content: center;
     
     width: 100%;
     min-height: 128px;
 
-    text-align: center;
     font-size: 30px;
     color: #fff;
 }
@@ -361,7 +362,6 @@ html{
     align-items: center;
     column-gap: 16px;
 
-    padding: 10px;
     font-weight: 500;
 }
 
@@ -429,9 +429,26 @@ html{
 .contact-fan .fan-name-email {
     column-gap: 16px;
 }
+/* content/ map */
+.map-section img{
+    width: 100%;
+}
+
 /* SECTION footer */
 #footer{
+    padding: 64px;
+    align-items: center;
+    row-gap: 15px;
+}
 
+#footer .social-lists > a{
+    font-size: 24px;
+    text-decoration: none;
+    color: #000;
+}
+
+#footer .copy-right > a{
+    color: #000;
 }
 
 /* SECTION animation */

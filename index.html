@@ -146,28 +146,41 @@
                             </div>
                         </div>
 
-                        <div class="contact-fan column-flex-between">
+                        <form class="contact-fan column-flex-between">
                             <div class="fan-name-email row-flex-between">
-                                <input type="text" name="fan-name" id="fan-name" class="input-style" placeholder="Name">
-                                <input type="email" name="fan-email" id="fan-email" class="input-style" placeholder="Email">
+                                <input type="text" name="" id="" required class="input-style" placeholder="Name">
+                                <input type="email" name="" id="" required class="input-style" placeholder="Email">
                             </div>
-                            <input type="text" name="fan-message" id="fan-message" class="input-style" placeholder="Message">
-                            <input type="submit" value="Send" class="button-style">
-                        </div>
+                            <input type="text" name="" id="" class="input-style" placeholder="Message">
+                            <input type="submit" value="SEND" class="button-style hover-button">
+                        </form>
                     </div>
                 </div>
                 
+                <!-- BEGIN MAP -->
+                <div class="map-section">
+                    <img src="./assets/img/map.jpg" alt="Map">
+                </div>
             </div>
     
-            <div id="footer">
-    
+            <div id="footer" class="column-flex-between">
+                <div class="social-lists">
+                    <a href="" class="hover-effect"><i class="ti-facebook"></i></a>
+                    <a href="" class="hover-effect"><i class="ti-instagram"></i></a>
+                    <a href="" class="hover-effect"><i class="ti-youtube"></i></a>
+                    <a href="" class="hover-effect"><i class="ti-pinterest"></i></a>
+                    <a href="" class="hover-effect"><i class="ti-twitter"></i></a>
+                    <a href="" class="hover-effect"><i class="ti-linkedin"></i></a>
+                </div>
+
+                <p class="copy-right">Powered by <a href="" class="hover-effect">w3.css</a></p>
             </div>
         </div>
 
         <!-- BUY MODAL -->
         <div class="modal-overlay js-modal-overlay">
             <div class="modal-container column-flex-between js-modal-container">
-                <div class="modal-header">`
+                <div class="modal-header">
                     <div class="modal-close hover-button js-modal-close">
                         <i class="ti-close"></i>
                     </div>
@@ -183,7 +196,7 @@
                             <i class="ti-shopping-cart"></i>
                             Tickets, $15 per person
                         </label>
-                        <input id="modal-quantity" type="text" class="input-style" placeholder="How many?">
+                        <input id="modal-quantity" type="number" class="input-style" placeholder="How many?">
                     </div>
                     <div class="modal-field column-flex-between">
                         <label for="modal-email" class="modal-label">
@@ -203,7 +216,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- Javascript BUY MODAL -->
         <script>
             const buyBtns = document.querySelectorAll(".js-place-buy-btn")
             const modal = document.querySelector(".js-modal-overlay")
