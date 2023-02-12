@@ -297,9 +297,13 @@ html{
 }
 
 /* content/ tour/ buy modal */
+.modal-overlay.open{
+    display: flex;
+}
+
 .modal-overlay {
     position: fixed;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 
@@ -322,6 +326,7 @@ html{
     min-height: 450px;
     
     background-color: #fff;
+    animation: modal-fade-in ease 0.5s;
 }
 
 .modal-header {
@@ -419,3 +424,14 @@ html{
 
 }
 
+@keyframes modal-fade-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
