@@ -12,33 +12,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="./assets/fonts/theband.ico" type="image/x-icon">
         <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
         <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     </head>
     <body>        
         <div id="main">
             <!-- SECTION HEADER -->
             <div id="header">
-                <!-- BEGIN NAV -->
+                <!-- NAV -->
                 <ul id="nav">
-                    <li class="nav-item hover-button"><a href="#">Home</a></li>
-                    <li class="nav-item hover-button"><a href="#band">Band</a></li>
-                    <li class="nav-item hover-button"><a href="#tour">Tour</a></li>
-                    <li class="nav-item hover-button"><a href="#contact">Contact</a></li>
-                    <li class="nav-item hover-button">
-                        <a href="#">
+                    <li class="hover-button js-nav-item"><a href="#">Home</a></li>
+                    <li class="hover-button js-nav-item"><a href="#band">Band</a></li>
+                    <li class="hover-button js-nav-item"><a href="#tour">Tour</a></li>
+                    <li class="hover-button js-nav-item"><a href="#contact">Contact</a></li>
+                    <li class="hover-button js-nav-item">
+                        <a href="#" class = "row-flex-between">
                             More
                             <i class="ti-angle-down"></i>
                         </a>
                         <ul class="subnav">
-                            <li class="nav-item hover-button"><a href="#">Merchandise</a></li>
-                            <li class="nav-item hover-button"><a href="#">Extras</a></li>
-                            <li class="nav-item hover-button"><a href="#">Media</a></li>
+                            <li class="hover-button"><a href="#">Merchandise</a></li>
+                            <li class="hover-button"><a href="#">Extras</a></li>
+                            <li class="hover-button"><a href="#">Media</a></li>
                         </ul>
                     </li>
                 </ul>
                 
-                <!-- BEGIN SEARCH-BUTTON -->
-                <div class="search-btn">
+                <!-- Mobile-menu-btn -->
+                <div class="mobile-menu-btn center hover-button js-mobile-menu-btn">
+                    <i class="ti-menu"></i>
+                </div>
+
+                <!-- Search-btn -->
+                <div class="search-btn center hover-button">
                     <i class="ti-search"></i>
                 </div>
                 
@@ -60,15 +66,15 @@
                         We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                     <div class="about-member row-flex-between">
-                        <div class="member-item">
+                        <div class="member-item column-flex-between">
                             <div class="member-name">Name</div>
                             <img src="./assets/img/member.jpg" alt="member images" class="member-img">
                         </div>
-                        <div class="member-item">
+                        <div class="member-item column-flex-between">
                             <div class="member-name">Name</div>
                             <img src="./assets/img/member.jpg" alt="member images" class="member-img">
                         </div>
-                        <div class="member-item">
+                        <div class="member-item column-flex-between">
                             <div class="member-name">Name</div>
                             <img src="./assets/img/member.jpg" alt="member images" class="member-img">
                         </div>
@@ -179,13 +185,13 @@
         </div>
 
         <!-- BUY MODAL -->
-        <div class="modal-overlay js-modal-overlay">
+        <div class="modal-overlay center js-modal-overlay">
             <div class="modal-container column-flex-between js-modal-container">
-                <div class="modal-header">
+                <div class="modal-header center">
                     <div class="modal-close hover-button js-modal-close">
                         <i class="ti-close"></i>
                     </div>
-                    <div class="modal-heading">
+                    <div class="modal-heading center">
                         <i class="ti-bag"></i>
                         <div>Tickets</div>
                     </div>
@@ -217,7 +223,49 @@
                 </div>
             </div>
         </div>
-        <!-- Javascript BUY MODAL -->
+
+        <!-- Javascript Open mobile-menu-btn -->
+        <script>
+            const menuBtn = document.querySelector(".js-mobile-menu-btn")
+            const navItems = document.querySelectorAll (".js-nav-item")
+            var headerHeight = header.clientHeight
+
+            function openMenu () {
+                for (var i=1; i < navItems.length; i++) {
+                    var navItem = navItems [i]
+                    navItem.classList.add("open")
+                }
+            }
+
+            function closeMenu () {
+                for (var i=1; i < navItems.length; i++) {
+                    var navItem = navItems [i]
+                    navItem.classList.remove("open")
+                }
+            }
+
+            // Check open-close state mobile-menu
+            function checkMenu() {
+                var isClosed = header.clientHeight === headerHeight
+                // Add/Remove class "open" to nav-item (except "HOME")
+                if (isClosed) {
+                    openMenu()
+                } else {
+                    closeMenu()
+                }
+            }             
+            
+            menuBtn.onclick = checkMenu
+            
+            // Auto-close when clicked
+            for (var i=0; i < navItems.length - 1; i++) {
+                var navItem = navItems[i]
+                navItem.onclick = function (){                    
+                    closeMenu()
+                }
+            }
+        </script>
+        <!-- Javascript Open modal-overlay -->
         <script>
             const buyBtns = document.querySelectorAll(".js-place-buy-btn")
             const modal = document.querySelector(".js-modal-overlay")
@@ -237,6 +285,7 @@
             }
 
             modalClose.addEventListener("click", closeBuyModal)
+            // Add another condition -tap the background- to close the modal
             modal.addEventListener("click", closeBuyModal)
             modalContainer.addEventListener("click", function(event) {
                 event.stopPropagation ()

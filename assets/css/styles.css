@@ -79,7 +79,7 @@ html{
 .input-style {
     width: 100%;
     display: block;
-    padding: 0.5em 1em;
+    padding: 0.5em;
 }
 
 .hover-button:hover{
@@ -106,6 +106,12 @@ html{
     align-items: flex-start;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* SECTION header */
 #header{
     position: fixed;
@@ -114,82 +120,76 @@ html{
     right: 0;
     z-index: 1;
 
-    height: var(--header-height);
-
+    align-items: flex-start;
     background-color: #000;
 }
 
-/* header/ nav/ subnav */
+/* header/ nav*/
 #nav{
-    display: inline-block;
-}
-
-#nav .subnav{
-    display: none;
-    position: absolute;
-    top: var(--header-height);
-
-    box-shadow: 0 0 0.5em rgba(0,0,0,0.3);
-}
-
-#nav .nav-item:hover .subnav{
     display: block;
 }
 
-/* header/ list-items */
-#nav .nav-item{
+#nav > li{
     display: inline-block;
     position: relative;
 
     height: var(--header-height);
 
     color: #fff;
+    background-color: #000;
 }
 
-#nav .subnav > .nav-item{
-    min-width: 10em;
-    --subnav-height: calc(var(--header-height) - 0.5em);
-    height: var(--subnav-height);
-
-    background-color: #fff;
-}
-
-/* header/ anchor */
-#nav > .nav-item > a{
-    display: inline-block;
+#nav > li > a{
+    display: block;
     padding: 0 1.5em;
-
+    
     line-height: var(--header-height);
     text-transform: uppercase;
 }
 
-#nav .subnav > .nav-item > a{
-    display: inline-block;
-    padding: 0 0.75em;
+#nav .subnav{
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+
+    box-shadow: 0 0 0.5em rgba(0,0,0,0.3);
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav > li{
+    min-width: 10em;
+    --subnav-height: calc(var(--header-height) - 0.5em);
+    height: var(--subnav-height);
+    
 
     color: #000;
+    background-color: #fff;
+}
 
+#nav .subnav > li > a{
+    display: block;
+    padding: 0 0.75em;
     line-height: var(--subnav-height);
 }
 
-/* header/ search-btn */
+/* header/ mobile-menu-btn, search-btn */
+#header .mobile-menu-btn,
 #header .search-btn{
-    float: right;
-    display: block;
-}
-
-#header .ti-search{
-    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: var(--header-height);
     padding: 0 1.5em;
-
+    
     color: #fff;
-
-    line-height: var(--header-height);
 }
 
-#header .search-btn:hover .ti-search{
-    background-color: #F44335;
-    cursor: pointer;
+#header .mobile-menu-btn{
+    display: none;
 }
 
 /* SECTION slider */
@@ -219,7 +219,7 @@ html{
 } 
 
 #slider .text-description{
-    font-weight: bold;
+    font-weight: 500;
     padding: 1em 0;
 }
 
@@ -257,7 +257,7 @@ html{
 
 #content .member-item{
     width: calc(100% / 4);
-    text-align: center;
+    align-items: center;
 }
 
 #content .member-img{
@@ -318,6 +318,7 @@ html{
 }
 
 .ticket-places .place-img{
+    width: 100%;
     display: block;
 }
 
@@ -325,10 +326,6 @@ html{
     background-color: #fff;
     padding: 1em;
     row-gap: 1em;
-}
-
-.ticket-places .place-heading{
-    font-weight: 550;
 }
 
 .ticket-places .place-dates{
@@ -347,8 +344,6 @@ html{
 .modal-overlay {
     position: fixed;
     display: none;
-    justify-content: center;
-    align-items: center;
 
     top: var(--header-height);
     right: 0;
@@ -361,6 +356,7 @@ html{
 .modal-container{
     width: 50em;
     max-width: calc(100%-2rem);
+    margin: 0 4vw;
     
     background-color: #fff;
 
@@ -371,8 +367,6 @@ html{
     background-color: #009688;
 
     position: relative;
-    display: flex;
-    justify-content: center;
 
     width: 100%;
     min-height: 8em;
@@ -390,13 +384,9 @@ html{
 }
 
 .modal-heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     column-gap: 0.5em;
 
     font-size: 2em;
-    font-weight: 500;
 }
 
 .modal-content {
@@ -415,8 +405,6 @@ html{
 
 .modal-label {
     display: block;
-
-    font-weight: 600;
 }
 
 .modal-button {
@@ -446,6 +434,7 @@ html{
 
 .contact-band {
     font-size: 1.25em;
+    font-weight: 500;
     width: 50%;
     row-gap: 0.5rem;
 }
@@ -491,14 +480,5 @@ html{
     to {
         transform: translateY(0);
         opacity: 1;
-    }
-}
-
-/* SECTION RESPONSIVE */
-/* For tablet devices */
-@media only screen and (max-width: 1024px ) and (min-width: 768px) {
-    #content .content-section{
-        margin: 0 4vw;
-        padding: 4rem 0;
     }
 }
