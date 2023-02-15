@@ -1,13 +1,30 @@
+/* For both tablet and mobile devices */
+@media (max-width: 1024px) {
+    html {
+        font-size: 1.25em;
+    }
+
+    /* SECTION footer */
+    #footer .social-lists {
+        column-gap: 0.5em;
+    }
+    
+    #footer .social-lists > a{
+        font-size: 1.5em;
+        color: #000;
+    }
+}
+
 /* For tablet devices */
-@media only screen and (max-width: 1024px ) and (min-width: 601px) {
+@media (max-width: 1024px ) and (min-width: 769px) {
     #content .content-section{
         margin: 0 4vw;
         padding: 4rem 0;
     }
 }
 
-/* For mobilde devices */
-@media only screen and (max-width: 600px) {
+/* For mobile devices */
+@media  (max-width: 768px) {
     /* GLOBAL CSS */
     .mobile-column-flex-between{
         display: flex;
@@ -80,7 +97,7 @@
     }
 
     .contact-content{
-        row-gap: 1rem;
+        row-gap: 2rem;
     }
 
     .contact-band {

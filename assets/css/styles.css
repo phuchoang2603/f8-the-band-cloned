@@ -40,7 +40,8 @@ select,
 button {
   color: inherit; 
   font: inherit; 
-  letter-spacing: inherit; 
+  letter-spacing: inherit;
+  -webkit-appearance: none;
 }
 
 input,
@@ -60,7 +61,6 @@ video {
 
 /* GLOBAL CSS */
 html{
-    /* font-size: 1.25em; */
     font-family: Arial, Helvetica, sans-serif;
     --header-height: 3rem;
     scroll-behavior: smooth;
@@ -440,6 +440,11 @@ html{
     row-gap: 0.5rem;
 }
 
+.contact-band a {
+    color: #009688;
+    text-decoration: underline;
+}
+
 .contact-fan {
     width: 50%;
     align-items: flex-end;
@@ -448,7 +453,7 @@ html{
 
 .contact-fan .fan-name-email {
     width: 100%;
-    column-gap: 1rem;
+    column-gap: 0.5rem;
 }
 /* content/ map */
 .map-section img{
@@ -459,16 +464,18 @@ html{
 #footer{
     margin: 4rem 2rem;
     align-items: center;
-    row-gap: 1rem   ;
+    row-gap: 1rem;
 }
 
-#footer .social-lists > a{
-    font-size: 1.25em;
+#footer .social-lists {
+    font-size: 1.5em;
+    column-gap: 1em;
     color: #000;
 }
 
 #footer .copy-right > a{
-    color: #000;
+    color: #009688;
+    text-decoration: underline;
 }
 
 /* SECTION animation */
