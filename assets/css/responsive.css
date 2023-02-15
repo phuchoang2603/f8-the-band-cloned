@@ -1,0 +1,97 @@
+/* For tablet devices */
+@media only screen and (max-width: 1024px ) and (min-width: 601px) {
+    #content .content-section{
+        margin: 0 4vw;
+        padding: 4rem 0;
+    }
+}
+
+/* For mobilde devices */
+@media only screen and (max-width: 600px) {
+    /* GLOBAL CSS */
+    .mobile-column-flex-between{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .button-style{
+        width: 100%;
+    }
+
+    /* SECTION header */
+    #nav > :not(li:first-of-type){
+        display: none;
+    }
+
+    #nav > li.open{
+        display: inline-block;
+    }
+
+    #nav > li {
+        width: 100%;
+    }
+
+    #nav > li:last-of-type > a {
+        display: flex;
+    }
+
+    #nav .subnav {
+        right: 0;
+    }
+
+    #nav .subnav > li{
+        width: 100%;
+    }
+
+    #header .search-btn{
+        display: none;
+    }
+
+    #header .mobile-menu-btn{
+        display: flex;
+    }
+
+    /* SECTION slider */
+    #slider .text-content{
+        display: none;
+    }
+
+    /* SECTION content */
+    #content .content-section{
+        margin: 0 2vw;
+        padding: 4rem 0;
+    }
+
+    #content .about-member{
+        row-gap: 1rem;
+    }
+
+    #content .member-item{
+        width: 100%;
+    }
+
+    #content .ticket-places{
+        row-gap: 1rem;
+    }
+
+    .ticket-places .place-item {
+        width: 100%;
+    }
+
+    .contact-content{
+        row-gap: 1rem;
+    }
+
+    .contact-band {
+        width: 100%;
+    }
+
+    .contact-fan {
+        width: 100%;
+    }
+
+    .contact-fan .fan-name-email {
+        row-gap: 0.5rem;
+    }
+}
