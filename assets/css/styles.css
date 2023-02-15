@@ -71,7 +71,7 @@ html{
 }
 
 .button-style {
-    padding: 0.5em 1em;
+    padding: 1em;
     background-color: #000;
     color: #fff;
 }
@@ -200,7 +200,7 @@ html{
     width: 100%;
     padding-top: 50%;
 
-    background: url("/assets/img/slider1.jpg") top center/cover no-repeat;
+    background: url("../img/slider1.jpg") top center/cover no-repeat;
 }
 
 #slider .text-content{
@@ -211,6 +211,7 @@ html{
 
     color: #fff;
     text-align: center;
+    text-shadow: 0 0 1px #000;
 }
 
 #slider .text-heading{
